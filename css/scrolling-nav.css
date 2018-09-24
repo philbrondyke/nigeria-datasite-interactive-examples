@@ -1,0 +1,56 @@
+/*!
+ * Start Bootstrap - Scrolling Nav (https://startbootstrap.com/template-overviews/scrolling-nav)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-scrolling-nav/blob/master/LICENSE)
+ */
+
+header {
+  padding: 20% 5% 20% 5%;
+
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("WTV.jpg");
+    /* Set a specific height */
+  min-height: 50vh;
+
+    /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+@media (min-width: 992px) {
+  header {
+    padding: 156px 0 100px;
+  }
+}
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+}
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  color: #0e667f;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 600;
+  font-size: 1.4em;
+  color: #5b5b5b;
+}
+
+p {
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 400;
+}
+
+section {
+  padding: 150px 0;
+}
+
+img {
+  width: 100%;
+}
