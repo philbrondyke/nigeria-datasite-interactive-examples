@@ -48,3 +48,11 @@ $(document).on('mousemove', function(e){
   });
 
 });
+
+//Image  Toggle
+var imageToggle = document.getElementById('image-toggle');
+var featuredImage = document.getElementById('featured-image');
+
+imageToggle.addEventListener('click', function (e) {
+  featuredImage.classList.toggle('none');
+});

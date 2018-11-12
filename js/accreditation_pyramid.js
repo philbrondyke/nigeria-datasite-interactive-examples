@@ -17,11 +17,11 @@ Highcharts.chart('pyramid', {
         style: {
           fontFamily: 'Arial, sans-serif',
         },
-        height: 580,
+        height: 600,
         backgroundColor: 'transparent',
     },
     title: {
-        text: 'Percent of Polling Units in Which Voters Were Accredited to Vote without the PVC Reader Checking Their Card',
+        text: 'Percent of Polling Units in 2015 in Which',
     },
     subtitle: {
         text: '(Click on the legend to explore by year.)'
@@ -68,7 +68,7 @@ Highcharts.chart('pyramid', {
         enabled: false
     },
     series: [{
-        name: 'Percent of PUs in 2011',
+        name: 'Voters were accredited without their PVCs being checked by the card reader',
         color: '#0e677f',
         data: [
             0, 0, 0, 0, 0, 0, 0, 0, -3, -4,
@@ -79,7 +79,7 @@ Highcharts.chart('pyramid', {
             -43, -43, -52
         ]
     }, {
-        name: 'Percent of PUs in 2015',
+        name: 'Voters were accredited even though the card reader could not read their PVC',
         color: '#81d2ff',
         data: [
             26, 56, 36, 0, 6, 8, 21, 42, 56, 27,
