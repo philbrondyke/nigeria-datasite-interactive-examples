@@ -1,0 +1,281 @@
+/*!
+ * Start Bootstrap - Scrolling Nav (https://startbootstrap.com/template-overviews/scrolling-nav)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-scrolling-nav/blob/master/LICENSE)
+ */
+
+header {
+  padding: 20% 5% 20% 5%;
+
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("WTV.jpg");
+    /* Set a specific height */
+  min-height: 50vh;
+
+    /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+@media (min-width: 992px) {
+  header {
+    padding: 156px 0 100px;
+  }
+}
+body{
+  overflow-x: hidden;
+}
+* {
+  box-sizing: border-box;
+}
+body > div {
+  width: 60%;
+  margin-left: 20%;
+  margin-bottom: 30px;
+  background: white;
+  padding: 20px;
+  border-radius: 2px;
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.2);
+}
+body > div:last-of-type {
+  margin-bottom: 100px;
+}
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+}
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  color: #0e667f;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 600;
+  font-size: 1.4em;
+  color: #5b5b5b;
+}
+
+p {
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 400;
+}
+
+p i {
+  color: red;
+}
+
+section {
+  padding: 150px 0;
+}
+
+img {
+  width: 100%;
+}
+
+.svgmap {
+  width: 100%;
+  margin:10px auto;
+  }
+
+  #maps path:hover {
+    fill: rgba(14,103,127,.5);
+    transition: fill 0.2s;
+    }
+
+  .cls-1 {
+    fill: #76c5cc;
+  }
+
+  .cls-1, .cls-2, .cls-3 {
+    stroke: #565656;
+    stroke-linecap: square;
+    stroke-linejoin: bevel;
+    stroke-width: 1.1px;
+    cursor: pointer;
+  }
+
+  .cls-2 {
+    fill: #3793a0;
+  }
+
+  .cls-3 {
+    fill: #0f687f;
+  }
+  /* Turnout line animation  */
+  /* Container for animations  */
+
+  @media screen and (max-width: 400px){
+    .all-image-container {
+      position: relative;
+      margin-bottom: 5em;
+    }
+  }
+
+  .all-image-container {
+    position: relative;
+    margin-bottom: 14em;
+  }
+
+  /* Each specific turnout div declared as absolute position  */
+  #turnout-4, #turnout-3, #turnout-2, #turnout-1 {
+    position: absolute;
+    top: 0px;
+    width: auto;
+  }
+
+  #turnout-1 {
+    z-index: 10000;
+  }
+
+  #turnout-2 {
+    z-index: 100000;
+  }
+
+  #turnout-3 {
+    z-index: 10000000;
+  }
+
+  #turnout-4 {
+    z-index: 1000000000;
+  }
+
+  /* Tooltip */
+  [class^="tooltip"] {
+    position: relative;
+  }
+  [class^="tooltip"]:after {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    content: attr(title);
+    padding: 6px 10px;
+    top: 1.4em;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-2px);
+            transform: translateX(-50%) translateY(-2px);
+    background: grey;
+    color: black;
+    white-space: nowrap;
+    z-index: 2;
+    border-radius: 2px;
+    transition: opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), -webkit-transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
+    transition: opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
+    transition: opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), -webkit-transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
+  }
+  [class^="tooltip"]:hover:after {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translateX(-50%) translateY(0);
+            transform: translateX(-50%) translateY(0);
+  }
+
+  .cls-1:after {
+    top: -4px;
+    left: 0;
+    -webkit-transform: translateX(-112%) translateY(0);
+            transform: translateX(-112%) translateY(0);
+  }
+  .cls-1:hover:after {
+    -webkit-transform: translateX(-110%) translateY(0);
+            transform: translateX(-110%) translateY(0);
+  }
+
+  .tooltip--right:after {
+    top: -4px;
+    left: 100%;
+    -webkit-transform: translateX(12%) translateY(0);
+            transform: translateX(12%) translateY(0);
+  }
+  .tooltip--right:hover:after {
+    -webkit-transform: translateX(10%) translateY(0);
+            transform: translateX(10%) translateY(0);
+  }
+
+  .tooltip--triangle:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: solid 5px transparent;
+    border-right: solid 5px transparent;
+    border-bottom: solid 5px grey;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    -webkit-transform: translateX(-50%) translateY(-2px);
+            transform: translateX(-50%) translateY(-2px);
+    top: 1.1em;
+    left: 50%;
+    transition: opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), -webkit-transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
+    transition: opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
+    transition: opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), -webkit-transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
+    z-index: 3;
+  }
+  .tooltip--triangle:hover:before {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translateX(-50%) translateY(0);
+            transform: translateX(-50%) translateY(0);
+  }
+
+/* Highcharts */
+
+
+/* Image Toggle */
+  .est2011 {
+  height: 0;
+  overflow: hidden;
+  padding-top: calc( 9/16 * 100% );
+  position: relative;
+  width: 100%;
+  background-image: url(../img/2011_results_estimate.svg);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  margin-bottom: 2rem;
+}
+
+.compare,
+.featured-image {
+  bottom: 0;
+  display: block;
+  left: 65px;
+  position: absolute;
+  right: 11px;
+  top: 0;
+}
+
+.featured-image {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 0;
+     object-position: 50% 0;
+  width: 74%;
+
+
+}
+
+.featured-image.none {
+  display: none;
+}
+
+button {
+  padding: 1rem 2rem;
+  border: 1px solid teal;
+  background: white;
+  color: teal;
+  margin: 2em auto;
+  display: block;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+button:active {
+  background: teal;
+  color: white;
+}
