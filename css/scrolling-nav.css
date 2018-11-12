@@ -107,27 +107,33 @@ img {
     fill: #0f687f;
   }
   /* Turnout line animation  */
-  #char-anim{
+  /* Container for animations  */
+  .all-image-container {
     position: relative;
-    display: inline;
-  }
-  #turnout-1 #turnout-3 #turnout-2 #turnout-4 {
-    position: absolute;
-    top: 0;
-    left: 0;
+    margin-bottom: 14em;
   }
 
-  #turnout-1{
-    z-index: 10;
+  /* Each specific turnout div declared as absolute position  */
+  #turnout-4, #turnout-3, #turnout-2, #turnout-1 {
+    position: absolute;
+    top: 0px;
+    width: auto;
   }
-  #turnout-2{
-    z-index: 20;
+
+  #turnout-1 {
+    z-index: 10000;
   }
-  #turnout-3{
-    z-index: 30;
+
+  #turnout-2 {
+    z-index: 100000;
   }
-  #turnout-4{
-    z-index: 40;
+
+  #turnout-3 {
+    z-index: 10000000;
+  }
+
+  #turnout-4 {
+    z-index: 1000000000;
   }
 
   /* Tooltip */
