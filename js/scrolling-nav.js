@@ -1,3 +1,7 @@
+// XXXXXXXXXXXXXXXX
+//Use jQuery in this demo is only for demo site navigation. Component visualizations only use CSS and pure JS.
+// XXXXXXXXXXXXXXXX
+
 (function($) {
   "use strict"; // Start of use strict
 
@@ -28,26 +32,6 @@
 
 })(jQuery); // End of use strict
 
-//SVG map tooltips
-$description = $(".description");
-
-  $('.cls-1').hover(function() {
-
-    $(this).attr("class", "cls-1");
-    $description.addClass('active');
-    $description.html($(this).attr('title'));
-  }, function() {
-    $description.removeClass('active');
-  });
-
-$(document).on('mousemove', function(e){
-
-  $description.css({
-    left:  e.pageX,
-    top:   e.pageY - 70
-  });
-
-});
 
 //Image  Toggle
 var imageToggle = document.getElementById('image-toggle');
