@@ -87,10 +87,64 @@ img {
       margin-bottom: 5em;
     }
   }
-
-  .all-image-container {
+  /* INEC OFFICIALS ANIMATION */
+  .inec-container {
     position: relative;
-    margin-bottom: 14em;
+    margin-bottom: 22em;
+  }
+
+  /* Each specific turnout div declared as absolute position  */
+  #inec-woman, #inec-man, #inec-table {
+    position: absolute;
+    top: 0px;
+    width: auto;
+    display: block;
+    margin-bottom: 20em;
+  }
+
+  #inec-woman {
+    z-index: 100;
+  }
+
+  #inec-man {
+    z-index: 10000;
+  }
+
+  #inec-table {
+    z-index: 1000;
+  }
+
+  /* PARTY AGENTS ANIMATION */
+  .agents-container {
+    position: relative;
+    margin-bottom: 22em;
+    display: block;
+  }
+
+  /* Each specific turnout div declared as absolute position  */
+  #agents-woman, #agents-man, #agents-table {
+    position: absolute;
+    top: 0px;
+    width: auto;
+    margin-bottom: 20em;
+  }
+
+  #agents-woman {
+    z-index: 100;
+  }
+
+  #agents-man {
+    z-index: 10000;
+  }
+
+  #agents-table {
+    z-index: 1000;
+  }
+
+  /* TURNOUT ANIMATION */
+  .turnout-container {
+    position: relative;
+    margin-bottom: 22em;
   }
 
   /* Each specific turnout div declared as absolute position  */
@@ -98,6 +152,8 @@ img {
     position: absolute;
     top: 0px;
     width: auto;
+    display: block;
+    margin-bottom: 20em;
   }
 
   #turnout-1 {
