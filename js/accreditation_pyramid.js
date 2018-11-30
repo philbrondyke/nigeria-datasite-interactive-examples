@@ -2,54 +2,79 @@
 
 // Age categories
 var categories = [
-    'Ebonyi', 'Edo', 'Ekiti', 'FCT',
-    'Kebbi', 'Kwara', 'Ondo', 'Taraba', 'Oyo',
-    'Jigawa', 'Ogun', 'Bayelsa', 'Lagos', 'Adamawa',
-    'Kogi', 'Plateau', 'Zamfara', 'Niger', 'Delta',
-    'Gombe', 'Bauchi', 'Imo', 'Osun', 'Yobe', 'Borno', 'Enugu',
-    'Nassarawa', 'Rivers', 'Benue', 'Akwa Ibom', 'Cross River',
-    'Katsina', 'Kano', 'Sokoto', 'Abia', 'Kaduna', 'Anambra'
+    'NC', 'NE', 'NW', 'SE',
+    'SS', 'SW'
 ];
 
 Highcharts.chart('pyramid', {
     chart: {
         type: 'bar',
         style: {
-          fontFamily: 'Arial, sans-serif',
+          fontFamily: 'Arial, sans-serif, Poppins,',
         },
         height: 600,
-        backgroundColor: 'transparent',
+        //Added the background of production site:
+        backgroundColor: '#00A556',
+        // The background can be transparent in production.
+        //backgroundColor: 'transparent',
     },
     title: {
-        text: 'Percent of Polling Units in 2015 in Which',
+        text: 'Percent of Polling Units in Each Zone During the 2015 Election in Which',
+        style: {
+          color: '#ffffff',
+          fontSize: '1.8em',
+        },
+
     },
     subtitle: {
-        text: '(Click on the legend to explore by year.)'
+        text: ''
+    },
+    legend: {
+        align: 'center',
+        verticalAlign: 'top',
+        layout: 'vertical',
+        x: 0,
+        itemStyle: {
+          color: '#ffffff',
+        }
     },
     xAxis: [{
         categories: categories,
         reversed: false,
         labels: {
-            step: 1
-        }
+            step: 1,
+            style: {
+              color: '#ffffff',
+            },
+        },
     }, { // mirror axis on right side
         opposite: true,
         reversed: false,
         categories: categories,
         linkedTo: 0,
         labels: {
-            step: 1
-        }
+            step: 1,
+            style: {
+              color: '#ffffff',
+            },
+        },
     }],
     yAxis: {
         title: {
-            text: null
+            text: null,
         },
+
         labels: {
             formatter: function () {
                 return Math.abs(this.value) + '%';
-            }
+            },
+            style: {
+              color: '#ffffff',
+            },
         }
+    },
+    exporting: {
+            enabled: false,
     },
 
     plotOptions: {
@@ -60,7 +85,7 @@ Highcharts.chart('pyramid', {
 
     tooltip: {
         formatter: function () {
-            return this.series.name + ' in ' + this.point.category + ' state:' + '<br/>' +
+            return this.series.name + ' in ' + this.point.category + ' zone:' + '<br/>' +
                 '<b>' + Highcharts.numberFormat(Math.abs(this.point.y), 0) + '%' + '</b>';
         }
     },
@@ -69,23 +94,16 @@ Highcharts.chart('pyramid', {
     },
     series: [{
         name: 'Voters were accredited without their PVCs being checked by the card reader',
-        color: '#0e677f',
+        color: '#FFDE17',
         data: [
-            0, 0, 0, 0, 0, 0, 0, 0, -3, -4,
-            -7, -9, -10, -11, -11, -11,
-            -12, -12, -13, -13, -14, -16,
-            -16, -17, -19, -19, -19, -19,
-            -32, -35, -35, -36, -38, -38,
-            -43, -43, -52
+            -23, -23, -24,
+            -29, -26, -19
         ]
     }, {
         name: 'Voters were accredited even though the card reader could not read their PVC',
-        color: '#81d2ff',
+        color: '#D1D1D1',
         data: [
-            26, 56, 36, 0, 6, 8, 21, 42, 56, 27,
-            44, 20, 41, 52, 51, 56, 26, 51, 52, 26,
-            48, 64, 27, 42, 53, 46, 58, 54, 56, 52,
-            55, 59, 53, 62, 70, 52, 56
+            6, 5, 13, 11, 7, 2,
         ]
     }]
 });
